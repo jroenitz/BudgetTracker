@@ -26,3 +26,10 @@ app.use(require("./routes/api.js"));
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
+//if deploy use this 
+var MONGODB_URI =  process.env.MONGODB_URI || "mongodb://localhost/budgettracker";
+
+//Connect to mongo db
+
+mongoose.connect(MONGODB_URI);
