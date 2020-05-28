@@ -5,7 +5,10 @@ fetch("/api/transaction")
   .then(response => {
     return response.json();
   })
-  .then(data => {
+  .then(async function (data) {
+
+
+    
     // save db data on global variable
     transactions = data;
 
